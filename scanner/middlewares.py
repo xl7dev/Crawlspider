@@ -12,13 +12,14 @@ import datetime
 from urllib.parse import urlparse
 from html.parser import HTMLParser
 from scrapy import signals
-from scrapy.conf import settings
+from scrapy.utils.project import get_project_settings
 from selenium import webdriver
 from scrapy.http import HtmlResponse
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 logger = logging.getLogger(__name__)
+settings = get_project_settings()
 
 
 class RandomUserAgentMiddleware(object):
