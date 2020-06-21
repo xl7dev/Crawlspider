@@ -31,7 +31,7 @@ class RandomUserAgentMiddleware(object):
 class ProxyMiddleware(object):
 	def process_request(self, request, spider):
 		proxy = random.choice(settings.get('PROXIES'))
-		request.meta['proxy'] = "http://{0}".format(proxy['ip_port'])
+		request.meta['proxy'] = "{0}".format(proxy['ip_port'])
 
 
 class ScannerSpiderMiddleware(object):

@@ -34,7 +34,7 @@ COMMANDS_MODULE = 'scanner.commands'
 FILES_STORE = './'
 DOWNLOAD_TIMEOUT = 216000
 PROXIES = [
-	{'ip_port': '127.0.0.1:8080', 'user_pass': ''}
+        {'ip_port': 'socks5://127.0.0.1:8080', 'user_pass': ''}
 ]
 SCHEDULER_PERSIST = True
 DOMAIN_DEPTHS = 5
