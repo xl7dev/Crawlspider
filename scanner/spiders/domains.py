@@ -166,4 +166,4 @@ class DomainsSpider(CrawlSpider):
 			for link in links:
 				seen.add(link)
 				r = self._build_request(n, link)
-				yield rule.process_request(r)
+				yield rule.process_request(r, response)
