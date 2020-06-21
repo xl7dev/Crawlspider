@@ -45,7 +45,7 @@ class ScannerSpiderMiddleware(object):
 		chrome_options.add_argument('--disable-gpu')
 		chrome_options.add_argument('--ignore-certificate-errors')
 		chrome_options.add_argument('blink-settings=imagesEnabled=false')
-		chrome_options.add_argument('--proxy-server=http://{0}'.format(proxy['ip_port']))
+		chrome_options.add_argument('--proxy-server={0}'.format(proxy['ip_port']))
 		chrome_options.add_argument(
 			'--user-agent= Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36')
 		chrome_options.add_experimental_option("prefs", {'download.default_directory': "/tmp/",
